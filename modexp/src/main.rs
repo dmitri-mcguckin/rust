@@ -1,21 +1,21 @@
-use std::io;
+use std::io::BufRead;
 
 fn modexp(x: i32, n: i32, m: i32) -> i32 {
    x + n + m
 }
 
 fn main() {
-    let mut arg1 = String::new();
-    let mut arg2 = String::new();
-    let mut arg3 = String::new();
+    let stdin = std::io::stdin(); // Standard in
+    let mut c = 1;
+    let mut args: [i32] = [0, 0, 0];
 
-    let mut x: i32 = arg1.unwrap();
-    let mut n: i32 = arg1.unwrap();
-    let mut m: i32 = arg1.unwrap();
+    for line in stdin.lock().lines() {
+        let line = line.expect("ambiguous io error!");
 
-    io::stdin().read_line(&mut x).expect("Could not read line!");
-    io::stdin().read_line(&mut n).expect("Could not read line!");
-    io::stdin().read_line(&mut m).expect("Could not read line!");
+        let val: i32 = line.parse().expect("NaN");
 
-    println!("result: {}", modexp(x, n, m));
+        println!("In: {}\tC: {}", val, c);
+        c += 1;
+        if(c > 3) { break; }
+    }
 }
