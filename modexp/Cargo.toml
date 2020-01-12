@@ -1,0 +1,11 @@
+[package]
+name = "modexp"
+version = "1.0.0"
+authors = ["Dmitri McGuckin"]
+edition = "2018"
+documentation = "https://github.com/dmitri-mcguckin/rust"
+license = "MIT"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
