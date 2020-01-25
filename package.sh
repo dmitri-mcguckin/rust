@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-INCLUDE=( "src/*" "tests/*" "Cargo.toml" "README.md")
+INCLUDE=( "src/*" "tests/*" "examples/*" "Cargo.toml" "README.md")
 
 function usage(){
   echo -e "$1\n\nUsage: ./package <crate-name>"
