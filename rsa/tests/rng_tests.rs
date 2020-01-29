@@ -1,8 +1,10 @@
 use rand::Rng;
 use rsa::*;
 
+// Randomly generate a key, encrypt, then decrpyt
+//  Then proove the message is the same 1000 times
 #[test]
-fn test() {
+fn rand_1000_test() {
     for i in 0..1000 {
         println!("iterating test #{}", i);
         let (p, q) = genkey();
