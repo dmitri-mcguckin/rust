@@ -56,15 +56,29 @@ fn arrays() {
 }
 
 fn vectors() {
-	let a = Vec::new();
+/*	let a = Vec::new();
 	// Or
 	let a = Vec::with_capacity(15);
+*/
+}
+
+fn swap<T: Clone>(stack: &mut Vec<T>, reg: &mut T) {
+	let tmp = stack.pop().unwrap();
+	stack.push(reg.clone());
+	*reg = tmp;
 }
 
 fn main() {
 	numbers();
 	arrays();
 	vectors();
+
+	let mut stack = vec!["1", "2", "3"];
+	let mut reg = "4";
+
+	dbg!(&stack);
+	swap(&mut stack, &mut reg);
+	dbg!(&stack);
 
 	let mut p = Point { x:12, y: 20 };
 	p.show_point();
