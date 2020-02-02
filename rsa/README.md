@@ -1,9 +1,5 @@
 # RSA Toy *(Assignment 2)*
 
-### Post Mortem
-
-The.
-
 ### General Usage
 
 #### Command-Line Demo:

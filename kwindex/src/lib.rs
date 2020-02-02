@@ -13,7 +13,7 @@ impl<'a> KWIndex<'a> {
                 '=', '[', ']', '{', '}', ';', ':', '\"', '<', '>', ',', '.', '/', '?', '\\', '|',
             ][..],
         ) {
-            if word != "" && !word.contains("\'") {
+            if word != "" && !word.contains('\'') {
                 self.0.push(word);
             }
         }
