@@ -15,7 +15,7 @@ where
         let mut res = vec![];
 
         for i in self {
-            if pred(&i) == true {
+            if pred(&i) {
                 res.push(i);
                 if res.len() > 1 {
                     break;
